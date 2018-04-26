@@ -37,7 +37,8 @@ end
 
 post "/catlog" do 
     description = " <h1> Catlog From Sweet Dreams Bakery </h1> <br> <h2> Cookies $5.99/ Dozen  <br>  Muffins $6.99/ Dozen <br> Cakes $59.99 / Pound </h2>"
-    puts params.inspect
+    
+    
     from = Email.new(email:'oahmed103140@gmail.com')
     to = Email.new(email:params[:email])
     subject = params[:name]
@@ -46,9 +47,6 @@ post "/catlog" do
     
     sg = SendGrid::API.new(api_key:ENV['SENDGRID_API_KEY'])
     response = sg.client.mail._('send').post(request_body: mail.to_json)
-    puts response.status_code
-    puts response.body
-    # puts response.parsed_body
-    puts response.headers
+    
     erb :thanks
     end
