@@ -50,5 +50,5 @@ post "/catlog" do
     puts response.body
     # puts response.parsed_body
     puts response.headers
-    erb :index
+    erb :thanks
     end
