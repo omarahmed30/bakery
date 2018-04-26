@@ -6,7 +6,21 @@
     margin-right: auto;
   }
 
-  .card img {
-      width: 10px;
-      height: 10px;
-  }
+ .card img {
+   height: 300px;
+ }
+
+
+ .logo {
+   font-size: 36px;
+   font-style: italic;
+   color: gray;
+ } 
+
+ .padding1{
+   padding-top: 100px;
+ }
+
+ .padding2{
+  padding-top: 50px;
+}
